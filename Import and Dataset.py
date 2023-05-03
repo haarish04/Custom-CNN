@@ -24,3 +24,34 @@ train_path = '[insert path]'
 test_path = '[insert path]'
 height = 50
 width = 50
+
+batch_size = 50
+seed = 42
+
+classes = { 0:'[class 1]', 
+            1:'[class 2]',
+            2:'[class 3]'}
+
+train_datagen = ImageDataGenerator(rescale=1./255,
+                                   validation_split=0.2)
+train_dataset = train_datagen.flow_from_directory(train_path,
+                                                  target_size=(height, width),
+                                                  batch_size=batch_size,
+                                                  class_mode='categorical',
+                                                  shuffle=True,
+                                                  seed=seed,
+                                                  color_mode='rgb',
+                                                  interpolation='hamming',
+                                                  subset='training')
+test_datagen = ImageDataGenerator(rescale=1./255,
+                                  validation_split=0.2)
+test_dataset = test_datagen.flow_from_directory(train_path,
+                                                target_size=(height, width),
+                                                batch_size=batch_size,
+                                                class_mode='categorical',
+                                                shuffle=True,
+                                                seed=seed,
+                                                color_mode='rgb',
+                                                interpolation='hamming',
+                                                subset='validation')
+
