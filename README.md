@@ -1,6 +1,6 @@
 # Custom-CNN
 
-Custom built CNN architecture with high accuracy 
+Custom built CNN architecture with 90%+ accuracy 
 
 The dataset must be divided into train and test
 
