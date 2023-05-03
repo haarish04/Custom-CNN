@@ -4,8 +4,8 @@ Custom built CNN architecture with 90%+ accuracy
 
 The dataset must be divided into train and test
 
-In the test folder, the folders must be named as 0,1,2.. and so on, based on the number of classes
-Map each class number to a class name in the "classes" variable
+In the train folder, the folders must be named as 0,1,2.. and so on, based on the number of classes
+Map each class number to a class name in the "classes" variable and store all images of one class in one numbered folder
 
 eg. animal recognition
 classes= {0:'cat',
